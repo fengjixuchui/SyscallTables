@@ -19,9 +19,13 @@
 + Windows 10 RS4 build 17134;
 + Windows 10 RS5 build 17763;
 + Windows 10 19H1 build 18362;
-+ Windows 10 20H1 build 18894.
++ Windows 10 19H2 build 18363;
++ Windows 10 20H1 build 19037;
++ Windows 10 20H2 build 19536.
 
 ** located in Tables\ntos
+
+**View online** https://hfiref0x.github.io/syscalls.html
 
 ## Win32k service tables
 
@@ -37,21 +41,25 @@
 + Windows 10 RS4 build 17134;
 + Windows 10 RS5 build 17763;
 + Windows 10 19H1 build 18362;
-+ Windows 10 20H1 build 18894.
++ Windows 10 19H2 build 18363;
++ Windows 10 20H1 build 19037;
++ Windows 10 20H2 build 19536.
 
 ** located in Tables\win32k
+
+**View online** https://hfiref0x.github.io/w32ksyscalls.html
 
 # Usage
 
 1) Dump syscall table list (using scg for ntoskrnl or wscg64 for win32k), see run examples for more info.  
 2) [Tables] <- put syscall list text file named as build number inside directory (ntos subdirectory for ntoskrnl.exe tables, win32k subdirectory for win32k.sys tables);
 
-3) sstc.exe <- run composer with key -t (generate text output file) or -h (generate html output file), it will read files from Tables directory and compose output table. Specify -w as second param if you want to generate win32k combined syscall table.
+3) sstc.exe <- run composer with key -m (generate markdown table output file) or -h (generate html output file), it will read files from Tables directory and compose output table. Specify -w as second param if you want to generate win32k combined syscall table.
 
 Run Examples:
 * scg64.exe c:\wfiles\ntdll\ntdll_7600.dll > table7600.txt 
 * wscg64.exe c:\wfiles\win32k\10240\win32k.sys > wtable10240.txt
-* sstc -t -w
+* sstc -m -w
 * sstc -h
 
 # Build
@@ -60,8 +68,8 @@ Composer source code written in C#. In order to build from source you need Micro
 
 # Authors
 
-+ scg (c) 2018 - 2019 SyscallTables Project
-+ sstComposer (c) 2016 - 2019 SyscallTables Project
-+ wscg64 (c) 2016 - 2019 SyscallTables Project, portions (c) 2010 deroko of ARTeam
++ scg (c) 2018 - 2020 SyscallTables Project
++ sstComposer (c) 2016 - 2020 SyscallTables Project
++ wscg64 (c) 2016 - 2020 SyscallTables Project, portions (c) 2010 deroko of ARTeam
 
 Original scg (c) 2011 gr8
